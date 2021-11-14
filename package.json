@@ -10,14 +10,22 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:arrangeimports.showText"
+		"onCommand:arrangeimports.addImports"
 	],
 	"main": "./dist/extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "arrangeimports.showText",
-				"title": "Show Text"
+				"command": "arrangeimports.addImports",
+				"title": "Add Imports"
+			}
+		],
+		"keybindings": [
+			{
+				"command": "arrangeimports.addImports",
+				"key": "ctrl+shift+i",
+				"mac": "cmd+shift+i",
+				"when": "editorTextFocus"
 			}
 		]
 	},

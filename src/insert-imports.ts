@@ -1,7 +1,7 @@
 import * as vscode from 'vscode';
 
 
-const addImports = (folderArray:string[]) => {
+const insertImports = (folderArray:string[]) => {
   const editor = vscode.window.activeTextEditor;
   
   if (!editor) {
@@ -16,4 +16,4 @@ const addImports = (folderArray:string[]) => {
   
 };
 
-export default addImports;
+export default insertImports;
