@@ -13,15 +13,20 @@ export function activate(context: vscode.ExtensionContext) {
 	// Now provide the implementation of the command with registerCommand
 	// The commandId parameter must match the command field in package.json
 	let disposable = vscode.commands.registerCommand('arrangeimports.addImports', async() => {
-		const folderList:string[]|undefined  = await listFolders();
+		try {
+			const folderList:string[]|undefined  = await listFolders();
+	
+			if (folderList && folderList.length > 0) {
+				insertImports(folderList)
+			}
+	
+		context.subscriptions.push(disposable);
 
-		if (folderList && folderList.length > 0) {
-			return insertImports(folderList)
+		} catch (err) {
+			vscode.window.showErrorMessage("Not able to run the extension")
 		}
 	});
-
-	context.subscriptions.push(disposable);
-}
+};
 
 // this method is called when your extension is deactivated
 export function deactivate() {}

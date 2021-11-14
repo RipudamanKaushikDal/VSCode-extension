@@ -17,7 +17,8 @@
 		"commands": [
 			{
 				"command": "arrangeimports.addImports",
-				"title": "Add Imports"
+				"title": "Add Imports",
+				"category": "Imports"
 			}
 		],
 		"keybindings": [
@@ -26,6 +27,18 @@
 				"key": "ctrl+shift+i",
 				"mac": "cmd+shift+i",
 				"when": "editorTextFocus"
+			}
+		],
+		"configuration": [
+			{
+				"title": "ArrangeImports",
+				"properties": {
+					"arrangeimports.folderDirectory": {
+						"type":"string",
+						"default":"/src",
+						"description": "Relative path to the root folder which contains all your files and folder, default is '/src'"
+					}
+				}
 			}
 		]
 	},
