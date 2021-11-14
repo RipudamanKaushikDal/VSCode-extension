@@ -11,7 +11,7 @@ const insertImports = (folderArray:string[]) => {
   const folderNames = folderArray.join('\n\n')
 
   editor.edit(editBuilder => {
-    editBuilder.insert(new vscode.Position(0,0), folderNames);
+    editBuilder.insert(new vscode.Position(0,0), folderNames + '\n');
   })
   
 };
