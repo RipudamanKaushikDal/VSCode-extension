@@ -1,16 +1,16 @@
 {
-  "name": "arrangeimports",
+	"name": "arrangeimports",
 	"displayName": "ArrangeImports",
 	"description": "An extension to arrange your imports with appropriate comments",
 	"version": "0.0.1",
 	"engines": {
-		"vscode": "^1.62.0"
+		"vscode": "^1.61.0"
 	},
 	"categories": [
 		"Other"
 	],
 	"activationEvents": [
-        "onCommand:arrangeimports.showText"
+		"onCommand:arrangeimports.showText"
 	],
 	"main": "./dist/extension.js",
 	"contributes": {
