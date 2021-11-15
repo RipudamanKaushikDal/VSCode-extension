@@ -8,7 +8,7 @@ This is a simple extension which adds the names of all the folders (in a user-de
 
 - Provides consistent and dynamic import template.
 
-- Can be invoked either by pressing `ctrl+shift+i` on windows and `cmd+shift+i` on mac or by selecting `Add Imports` through command palette.
+- Can be invoked either by pressing `ctrl+shift+i` on windows and `cmd+shift+i` on mac or by selecting _Add Imports_ through command palette.
 
 \!\[feature X\]\(images/feature-x.png\)
 
@@ -18,8 +18,8 @@ This is a simple extension which adds the names of all the folders (in a user-de
 
 This extension contributes the following settings:
 
-- `myExtension.addImports`: Search for `Imports/Add Imports`, in command palette, to run this extension.
-- `myExtension.folderDirectory`: Relative path of the folder (to root folder), containing your custom code. Set to `/src` by default, can be changed easily through settings.
+- **arrangeimports.addImports**: Search for _Imports/Add Imports_, in command palette, to run this extension.
+- **arrangeimports.folderDirectory**: Relative path of the folder (to root folder), containing your custom code. Set to `/src` by default, can be changed easily through settings.
 
 ## Release Notes
 
