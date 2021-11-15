@@ -20,7 +20,7 @@ export function activate(context: vscode.ExtensionContext) {
 				insertImports(folderList)
 			}
 	
-		context.subscriptions.push(disposable);
+			context.subscriptions.push(disposable);
 
 		} catch (err) {
 			vscode.window.showErrorMessage("Not able to run the extension")
