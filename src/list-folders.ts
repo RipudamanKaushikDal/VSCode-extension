@@ -29,7 +29,7 @@ const listFolders = async() => {
         return folderList
 
     } catch (err) {
-        vscode.window.showErrorMessage("Not able to run the extension")
+        vscode.window.showErrorMessage("Not able to find folders, check folder directory")
     }
 
 }

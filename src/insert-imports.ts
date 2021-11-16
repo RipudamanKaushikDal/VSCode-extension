@@ -1,7 +1,7 @@
 import * as vscode from 'vscode';
 
 
-const insertImports = (folderArray:string[]) => {
+const insertImports = async(folderArray:string[]) => {
   const editor = vscode.window.activeTextEditor;
   
   if (!editor) {
@@ -10,12 +10,13 @@ const insertImports = (folderArray:string[]) => {
 
   const folderNames = folderArray.join('\n\n')
 
-  editor.edit((editBuilder) => {
+  const lineInserted:boolean = await editor.edit((editBuilder) => {
     editBuilder.insert(new vscode.Position(0,0), folderNames + '\n');
-  }).then(confirmation => {
-    if (!confirmation){
-      return vscode.window.showErrorMessage("Not able to run the extension")
-  }})
+  });
+
+  if (!lineInserted){
+      return vscode.window.showErrorMessage("Not able to insert import comments")
+  }
 };
 
 export default insertImports;
