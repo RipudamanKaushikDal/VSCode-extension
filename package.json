@@ -2,8 +2,9 @@
 	"name": "arrangeimports",
 	"displayName": "ArrangeImports",
 	"description": "An extension to arrange your imports with appropriate comments",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"publisher": "RipudamanKaushik",
+	"icon": "images/logo.png",
 	"repository":{
 		"url": "https://github.com/RipudamanKaushikDal/VSCode-extension"
 	},
