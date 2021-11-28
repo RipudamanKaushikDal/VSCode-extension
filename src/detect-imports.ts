@@ -11,12 +11,12 @@ const detectImports = () =>{
 
   for (let i = 0; i < editor.document.lineCount; ++i){
     const line:vscode.TextLine = editor.document.lineAt(i);
-    const foldersearchExpression:RegExp = /import.*?\.\.\//;
-    const stylesearchExpression:RegExp = /import.*?(\.css|\.scss|\.sass|\.less)/;
-    if (line.text.match(foldersearchExpression)){
-      const strippedLine:string[] = line.text.replace(foldersearchExpression,'').split('/');
-      importedFolders.add(`// ${strippedLine[1].toUpperCase()}`);
-    } else if (line.text.match(stylesearchExpression)){
+    const folderSearchExpression:RegExp = /import.*?\.\.\//;
+    const styleSearchExpression:RegExp = /import.*?(\.css|\.scss|\.sass|\.less)/;
+    if (line.text.match(folderSearchExpression)){
+      const wordArray:string[] = line.text.replace(folderSearchExpression,'').split('/');
+      importedFolders.add(`// ${wordArray[1].toUpperCase()}`);
+    } else if (line.text.match(styleSearchExpression)){
       importedFolders.add("// STYLES");
     }
   }
