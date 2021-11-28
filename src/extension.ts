@@ -25,7 +25,7 @@ export function activate(context: vscode.ExtensionContext) {
 			context.subscriptions.push(addFolders);
 
 		} catch (err) {
-			vscode.window.showErrorMessage("Not able to run the extension")
+			vscode.window.showErrorMessage("Not able to run the extension");
 		}
 	});
 

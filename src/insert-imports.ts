@@ -15,7 +15,7 @@ const insertImports = async(folderArray:string[]) => {
   });
 
   if (!lineInserted){
-      return vscode.window.showErrorMessage("Not able to insert import comments")
+      return vscode.window.showErrorMessage("Not able to insert import comments");
   }
 };
 

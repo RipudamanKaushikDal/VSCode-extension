@@ -35,6 +35,12 @@
 		"keybindings": [
 			{
 				"command": "arrangeimports.addImports",
+				"key": "ctrl+shift+a",
+				"mac": "cmd+shift+a",
+				"when": "editorTextFocus"
+			},
+			{
+				"command": "arrangeimports.detectImports",
 				"key": "ctrl+shift+i",
 				"mac": "cmd+shift+i",
 				"when": "editorTextFocus"
