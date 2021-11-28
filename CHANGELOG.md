@@ -6,6 +6,8 @@ All notable changes to the "arrangeimports" extension will be documented in this
 
 - Initial release
 
-## 1.0.1
+## 1.1
 
-- Added Icon to the extension
+- Added Command to detect already written import statements and generate import template accordngly
+
+- Updated keybindings for the commands
