@@ -15,7 +15,8 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:arrangeimports.addImports"
+		"onCommand:arrangeimports.addImports",
+		"onCommand:arrangeimports.detectImports"
 	],
 	"main": "./dist/extension.js",
 	"contributes": {
@@ -23,6 +24,11 @@
 			{
 				"command": "arrangeimports.addImports",
 				"title": "Add Imports",
+				"category": "Imports"
+			},
+			{
+				"command": "arrangeimports.detectImports",
+				"title": "Detect Imports",
 				"category": "Imports"
 			}
 		],

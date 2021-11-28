@@ -8,7 +8,7 @@ const insertImports = async(folderArray:string[]) => {
     return;
   }
 
-  const folderNames = folderArray.join('\n\n')
+  const folderNames = folderArray.join('\n\n');
 
   const lineInserted:boolean = await editor.edit((editBuilder) => {
     editBuilder.insert(new vscode.Position(0,0), folderNames + '\n');
