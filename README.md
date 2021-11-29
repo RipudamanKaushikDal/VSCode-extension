@@ -14,6 +14,8 @@ This extension allows you to insert an import template at the beginning of your 
 
 - To import template based on current import statements, invoke the command either by pressing `ctrl+shift+i` on windows and `cmd+shift+i` on mac or by selecting _Detect Imports_ through command palette.
 
+- Auto detect CSS, SASS (_.sass/.scss_) and LESS and adds a **STYLES** Comment
+
 ## Extension Settings
 
 This extension contributes the following settings:
@@ -29,9 +31,9 @@ This extension contributes the following settings:
 Initial release of **arrangeimports** extension.
 .
 
-### 1.1
+### 1.1.0
 
-## Added additional command to extension
+Added command to detect imports
 
 P.S. - It's my first extension so please feel free to suggest any features/changes :)
 
