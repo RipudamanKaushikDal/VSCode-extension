@@ -10,9 +10,11 @@ This extension allows you to insert an import template at the beginning of your 
 
 - To import template based on folder names, invoke the command either by pressing `ctrl+shift+a` on windows and `cmd+shift+a` on mac or by selecting _Add Imports_ through command palette.
 
-![Invoking Extension](images/Animation.gif)
+![Import Folders](images/Import-Folders.gif)
 
 - To import template based on current import statements, invoke the command either by pressing `ctrl+shift+i` on windows and `cmd+shift+i` on mac or by selecting _Detect Imports_ through command palette.
+
+![Detect Folders](images/Detect-Imports.gif)
 
 - Auto detect CSS, SASS (_.sass/.scss_) and LESS and adds a **STYLES** Comment
 
