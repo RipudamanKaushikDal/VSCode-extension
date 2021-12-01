@@ -4,6 +4,9 @@ import * as vscode from 'vscode';
 import listFolders from './list-folders';
 import insertImports from './insert-imports';
 import detectImports from './detect-imports';
+import shuffleImports from './shuffle-imports';
+import ImportStatements from './import-mapping';
+import insertTemplate from './insert-template';
 
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
@@ -29,13 +32,13 @@ export function activate(context: vscode.ExtensionContext) {
 		}
 	});
 
-	let detectFolders = vscode.commands.registerCommand('arrangeimports.detectImports',() => {
+	let detectFolders = vscode.commands.registerCommand('arrangeimports.detectImports',async() => {
 		try {
-			const folderList:string[]|undefined  = detectImports();
+			const folderList:ImportStatements|undefined  = await shuffleImports();
 
 	
-			if (folderList && folderList.length > 0) {
-				insertImports(folderList);
+			if (folderList && Object.keys(folderList).length > 0) {
+				insertTemplate(folderList);
 			}
 	
 			context.subscriptions.push(detectFolders);
