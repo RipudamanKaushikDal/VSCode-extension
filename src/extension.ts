@@ -3,7 +3,6 @@
 import * as vscode from 'vscode';
 import listFolders from './list-folders';
 import insertImports from './insert-imports';
-import detectImports from './detect-imports';
 import shuffleImports from './shuffle-imports';
 import ImportStatements from './import-mapping';
 import insertTemplate from './insert-template';
@@ -25,7 +24,6 @@ export function activate(context: vscode.ExtensionContext) {
 				insertImports(folderList);
 			}
 	
-			context.subscriptions.push(addFolders);
 
 		} catch (err) {
 			vscode.window.showErrorMessage("Not able to run the extension");
@@ -41,12 +39,14 @@ export function activate(context: vscode.ExtensionContext) {
 				insertTemplate(folderList);
 			}
 	
-			context.subscriptions.push(detectFolders);
+			
 
 		} catch (err) {
 			vscode.window.showErrorMessage("Not able to run the extension");
 		}
 	});
+
+	context.subscriptions.push(addFolders,detectFolders);
 };
 
 // this method is called when your extension is deactivated

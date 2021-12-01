@@ -14,8 +14,6 @@ const insertTemplate = async(importMapping:ImportStatements) => {
     templateString = templateString.concat(`// ${folderName.toUpperCase()}`+'\n'+importStatements+'\n');
   });
 
-  
-
   const lineInserted:boolean = await editor.edit((editBuilder) => {
     editBuilder.insert(new vscode.Position(0,0), templateString);
   });

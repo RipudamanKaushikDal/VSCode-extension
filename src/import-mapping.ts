@@ -1,3 +1,3 @@
 export default interface ImportStatements  {
-  [key:string]:string
+  [key:string]:string,
 }
