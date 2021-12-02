@@ -3,7 +3,7 @@
 import * as vscode from 'vscode';
 import listFolders from './list-folders';
 import insertImports from './insert-imports';
-import shuffleImports from './shuffle-imports';
+import editImports from './shuffle-imports';
 import ImportStatements from './import-mapping';
 import insertTemplate from './insert-template';
 
@@ -21,32 +21,30 @@ export function activate(context: vscode.ExtensionContext) {
 
 	
 			if (folderList && folderList.length > 0) {
-				insertImports(folderList);
-			}
-	
-
-		} catch (err) {
-			vscode.window.showErrorMessage("Not able to run the extension");
-		}
-	});
-
-	let detectFolders = vscode.commands.registerCommand('arrangeimports.detectImports',async() => {
-		try {
-			const folderList:ImportStatements|undefined  = await shuffleImports();
-
-	
-			if (folderList && Object.keys(folderList).length > 0) {
 				insertTemplate(folderList);
 			}
 	
-			
 
 		} catch (err) {
 			vscode.window.showErrorMessage("Not able to run the extension");
 		}
 	});
 
-	context.subscriptions.push(addFolders,detectFolders);
+	let shuffleImports = vscode.commands.registerCommand('arrangeimports.shuffleImports',async() => {
+		try {
+			const folderList:ImportStatements|undefined  = await editImports();
+
+	
+			if (folderList && Object.keys(folderList).length > 0) {
+				insertImports(folderList);
+			}			
+
+		} catch (err) {
+			vscode.window.showErrorMessage("Not able to run the extension");
+		}
+	});
+
+	context.subscriptions.push(addFolders,shuffleImports);
 };
 
 // this method is called when your extension is deactivated

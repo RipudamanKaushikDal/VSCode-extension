@@ -2,7 +2,7 @@
 	"name": "arrangeimports",
 	"displayName": "ArrangeImports",
 	"description": "An extension to arrange your imports with appropriate comments",
-	"version": "1.1.0",
+	"version": "2.0.0",
 	"publisher": "RipudamanKaushik",
 	"icon": "images/logo.png",
 	"repository":{
@@ -16,7 +16,7 @@
 	],
 	"activationEvents": [
 		"onCommand:arrangeimports.addImports",
-		"onCommand:arrangeimports.detectImports"
+		"onCommand:arrangeimports.shuffleImports"
 	],
 	"main": "./dist/extension.js",
 	"contributes": {
@@ -27,7 +27,7 @@
 				"category": "Imports"
 			},
 			{
-				"command": "arrangeimports.detectImports",
+				"command": "arrangeimports.shuffleImports",
 				"title": "Detect Imports",
 				"category": "Imports"
 			}
@@ -40,7 +40,7 @@
 				"when": "editorTextFocus"
 			},
 			{
-				"command": "arrangeimports.detectImports",
+				"command": "arrangeimports.shuffleImports",
 				"key": "ctrl+shift+i",
 				"mac": "cmd+shift+i",
 				"when": "editorTextFocus"
