@@ -46,12 +46,12 @@ const shuffleImports = async() =>{
         importedFolders[importDirectory] = line.text+'\n';
       }
       
-    } else {
+    } else if(line.text.includes('import')) {
       lineRanges.push(line.range);
       packages.push(line.text);
     }
   }
-  const allPackages = packages.join('\n');
+  const allPackages = packages.join('\n')+'\n';
 
   await deleteImports(lineRanges,editor);
 
