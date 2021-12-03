@@ -28,7 +28,7 @@
 			},
 			{
 				"command": "arrangeimports.shuffleImports",
-				"title": "Detect Imports",
+				"title": "Shuffle Imports",
 				"category": "Imports"
 			}
 		],
