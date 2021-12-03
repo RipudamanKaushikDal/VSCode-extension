@@ -16,7 +16,7 @@ const editImports = async () =>{
   const folderSearchExpression:RegExp = /import.*?\..*?\//;
   const styleSearchExpression:RegExp = /import.*?(\.css|\.scss|\.sass|\.less)/;
 
-  await editor.edit(editBuilder => {
+  const editFile = await editor.edit(editBuilder => {
 
       for (let i = 0; i < editor.document.lineCount; ++i){
     
@@ -53,7 +53,11 @@ const editImports = async () =>{
         }
       }
   });
-  
+
+  if (!editFile){
+    vscode.window.showErrorMessage("Unable to edit current file")
+  }
+
   const allPackages = packages.join('\n')+'\n';
 
   return {packages:allPackages,...importedFolders};
